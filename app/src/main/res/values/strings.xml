@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">车位巡航系统</string>
+    <string name="username_hint">手机号码</string>
+    <string name="verification">发送验证码</string>
+    <string name="carNum">车牌号</string>
+    <string name="password_hint">密码</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="need_help">需要帮助</string>
+    <string name="login_text">登录</string>
+    <string name="info">©2014-2056 Powered By Yank</string>
+    <string name="FirstinButton">立即体验</string>
+    <string name="btn_register">注册</string>
+    <string name="send_verification">发送验证码</string>
+    <string name="action_settings">Settings</string>
+</resources>

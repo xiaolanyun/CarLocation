@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    //对正式签名文件的配置引用:
+    //signingConfig signingConfigs.release
+    signingConfigs {
+        release {
+            keyAlias 'CarLocationkey'
+            keyPassword 'xiaolanyun521'
+            storeFile file('E:/1桌面/android学习笔记/开发地图应用/步骤/密钥/CarLocationkey.jks')
+            storePassword 'xiaolanyun521'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            //说明so的路径为该libs路径，关联所有地图SDK的so文件
+        }
+    }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "tenyond.yank.com.carlocation"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile files('libs/BaiduLBS_Android.jar')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.github.jokermonn:permissions4m:2.1.2-lib'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    annotationProcessor 'com.github.jokermonn:permissions4m:2.1.2-processor'
+}

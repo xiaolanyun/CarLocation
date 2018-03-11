@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/item_toobar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/toolBar"
+    android:elevation="@dimen/common_elevation">
+
+    <ImageButton
+        android:id="@+id/title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/toolbar_back"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/title_text"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Title"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/title_text"/>
+
+    <ImageButton
+        android:id="@+id/title_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/toolbar_more"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/common_margin"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:id="@+id/choice_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/common_text"
+        android:fontFamily="sans-serif"
+        android:visibility="gone"
+        android:layout_centerVertical="true"/>
+
+
+
+</RelativeLayout>

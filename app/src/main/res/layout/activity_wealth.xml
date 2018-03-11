@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F3F6"
+    >
+
+
+    <LinearLayout style="@style/wrap_layout" >
+        <!-- 上圆角-->
+        <LinearLayout style="@style/top_layout">
+            <TextView style="@style/usertext"
+                android:text="个人财富"
+                android:layout_weight="2"/>
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View style="@style/bg_line"/>
+        <!-- 无圆角-->
+        <LinearLayout style="@style/mid_layout">
+            <TextView
+                style="@style/usertext"
+                android:text="余额显示      0.0" />
+            <!--<ImageView style="@style/img_arrow"/>-->
+        </LinearLayout>
+
+        <!-- 分割线 -->
+        <View style="@style/bg_line"/>
+        <!-- 无圆角-->
+        <LinearLayout style="@style/mid_layout">
+            <TextView style="@style/usertext" android:text="请选择充值方式" />
+            <!--<ImageView style="@style/img_arrow"/>-->
+        </LinearLayout>
+        <!-- 分割线 -->
+        <View style="@style/bg_line"/>
+        <!-- 无圆角-->
+        <LinearLayout style="@style/mid_layout">
+            <TextView android:id="@+id/zhifubao" style="@style/usertext" android:text="支付宝" />
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+
+        <!-- 下圆角-->
+        <LinearLayout style="@style/bottom_layout">
+            <TextView android:id="@+id/caifutong" style="@style/usertext" android:text="财付通" />
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- 全圆角-->
+    <LinearLayout style="@style/wrap_layout">
+        <LinearLayout style="@style/single_layout">
+            <TextView style="@style/usertext" android:text="帮助"/>
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+        <LinearLayout style="@style/single_layout">
+            <TextView style="@style/usertext" android:text="返回"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
